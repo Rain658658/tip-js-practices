@@ -1,0 +1,28 @@
+"use strict";
+
+const result = "8"+2;
+console.log("Результат 0:", result);
+console.log("Тип результата:", typeof result);
+const result1 = "8"-2;
+console.log("Результат 1:", result1);
+console.log("Тип результата:", typeof result1);
+const result2 = Number("8")+2;
+console.log("Результат 2:", result2);
+console.log("Тип результата:", typeof result2);
+const result3 = "12">"3";
+console.log("Результат 3:", result3);
+console.log("Тип результата:", typeof result3);
+const result4 = "12"===12;
+console.log("Результат 4:", result4);
+console.log("Тип результата:", typeof result4);
+const result5 = "";
+console.log("Результат 5:", result5);
+console.log("Тип результата:", typeof result5);
+const result6 = Number("text");
+console.log("Результат 6:", result6);
+console.log("Тип результата:", typeof result6);
+const result7 = Boolean("false");
+console.log("Результат 7:", result7);
+console.log("Тип результата:", typeof result7);
+console.log("Тип результата null:", typeof null);
+console.log("Тип результата NaN:", typeof NaN);

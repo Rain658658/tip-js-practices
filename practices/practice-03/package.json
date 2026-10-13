@@ -1,0 +1,9 @@
+{
+  "name": "tip-js-practice-03",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:service": "node checks-service.js"
+  }
+}

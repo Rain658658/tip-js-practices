@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ПР3 — Управление задачами</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1 id="page-title">Приложение управления задачами</h1>
+    <nav class="page-nav">
+      <a href="./index.html">Общий набор</a>
+      <a href="./index.html?dataset=variant">Свой вариант</a>
+      <a href="./checks.html">Проверки</a>
+      <a href="./examples/dom-events.html">Эксперименты</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <!-- Сводка -->
+    <section class="summary" id="task-summary" aria-label="Сводка по задачам">
+      <div class="summary-item">
+        <span class="summary-label">Всего:</span>
+        <span data-stat="total">0</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Выполнено:</span>
+        <span data-stat="completed">0</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Осталось:</span>
+        <span data-stat="pending">0</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Прогресс:</span>
+        <span data-stat="progress">0.0%</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Показано:</span>
+        <span data-stat="visible">0</span>
+      </div>
+    </section>
+
+    <!-- Фильтры -->
+    <section class="toolbar" id="task-filters" aria-label="Фильтры задач">
+      <button type="button" data-filter="all" class="is-active" aria-pressed="true">
+        Все
+      </button>
+      <button type="button" data-filter="pending" aria-pressed="false">
+        В работе
+      </button>
+      <button type="button" data-filter="completed" aria-pressed="false">
+        Выполненные
+      </button>
+    </section>
+
+    <!-- Сообщение об операции (ошибки, отказы) -->
+    <p id="operation-message" class="operation-message" role="status" aria-live="polite"></p>
+
+    <!-- Сообщение о пустом состоянии -->
+    <p id="empty-message" class="empty-message" hidden></p>
+
+    <!-- Список задач -->
+    <ul id="task-list" class="task-list" aria-label="Список задач"></ul>
+  </main>
+
+  <footer class="page-footer">
+    <small>Практическая работа № 3 — DOM и события</small>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

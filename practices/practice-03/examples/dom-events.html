@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Эксперименты с DOM и событиями</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .example-block {
+      background: #fff;
+      border: 1px solid #d9dee5;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .example-block h2 { margin-top: 0; }
+    #journal {
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: .85rem;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 12px;
+      border-radius: 6px;
+      max-height: 240px;
+      overflow: auto;
+    }
+    #journal div { padding: 2px 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <h1>Эксперименты с DOM и событиями</h1>
+    <nav class="page-nav">
+      <a href="../index.html">← К приложению</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="example-block">
+      <h2>1. Поиск отсутствующего элемента</h2>
+      <p>Откройте Console и посмотрите вывод.</p>
+      <button type="button" id="run-missing">Запустить</button>
+    </section>
+
+    <section class="example-block">
+      <h2>2. dataset.taskId</h2>
+      <button type="button" data-task-id="23" id="dataset-btn">Кнопка с data-task-id="23"</button>
+      <p>Откройте Console.</p>
+    </section>
+
+    <section class="example-block">
+      <h2>3. Двойное добавление записи</h2>
+      <button type="button" id="add-item">Добавить запись</button>
+      <ul id="items">
+        <li>Элемент 1</li>
+      </ul>
+    </section>
+
+    <section class="example-block">
+      <h2>4. textContent vs innerHTML</h2>
+      <h3 id="title-target">Исходный заголовок</h3>
+      <button type="button" id="change-title">
+        Изменить заголовок на <strong>«Заголовок»</strong>
+      </button>
+    </section>
+
+    <section class="example-block">
+      <h2>5. Всплытие и target / currentTarget</h2>
+      <div id="outer">
+        <button type="button" id="bubble-btn">
+          Кнопка с <span id="bubble-span">вложенным span</span>
+        </button>
+      </div>
+      <h3>Журнал</h3>
+      <div id="journal"></div>
+      <button type="button" id="clear-journal">Очистить журнал</button>
+    </section>
+  </main>
+
+  <script type="module" src="./dom-events.js"></script>
+</body>
+</html>

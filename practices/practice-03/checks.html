@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Проверки ПР3</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .checks-frame { width: 100%; height: 320px; border: 1px solid #d9dee5; border-radius: 8px; }
+    .protocol { background: #0f172a; color: #e2e8f0; padding: 12px; border-radius: 6px; font-family: ui-monospace, Consolas, monospace; white-space: pre-wrap; }
+    .summary-line { font-weight: 600; margin: 12px 0; }
+    .ok { color: #16a34a; }
+    .fail { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <h1>Браузерные проверки</h1>
+    <nav class="page-nav">
+      <a href="./index.html">К приложению</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <p>Проверяется приложение из iframe. Не нажимайте элементы внутри iframe до завершения прогона.</p>
+    <iframe id="app-frame" class="checks-frame" src="./index.html"></iframe>
+    <p id="checks-summary" class="summary-line">Выполняется…</p>
+    <pre id="checks-log" class="protocol"></pre>
+  </main>
+
+  <script type="module" src="./checks/browser.checks.js"></script>
+</body>
+</html>

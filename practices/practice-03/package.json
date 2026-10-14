@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check:service": "node checks-service.js"
+    "start": "node tools/serve.mjs",
+    "check:service": "node checks/service.checks.js"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

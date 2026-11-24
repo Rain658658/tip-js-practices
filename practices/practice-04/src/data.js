@@ -1,5 +1,7 @@
-// Перед началом ПР4 заменить этот файл собственной проверенной версией из ПР3.
-// Общий контрольный набор не изменяется: он используется в автоматических проверках.
+"use strict";
+
+export const variantNumber = 6;
+
 export const demoTasks = [
   { id: 1, title: "Изучить функции", completed: true, priority: "medium" },
   { id: 4, title: "Подготовить модель задач", completed: false, priority: "high" },
@@ -7,6 +9,11 @@ export const demoTasks = [
   { id: 10, title: "Оформить README", completed: true, priority: "medium" },
 ];
 
-// TODO: перенести номер и шесть задач своего варианта из ПР3.
-export const variantNumber = null;
-export const variantTasks = [];
+export const variantTasks = [
+  { id: 11, title: "Проверить вёрстку главной страницы", completed: true, priority: "medium" },
+  { id: 23, title: "Проверить навигацию", completed: true, priority: "high" },
+  { id: 37, title: "Проверить формы ввода", completed: true, priority: "low" },
+  { id: 41, title: "Проверить адаптивность", completed: true, priority: "medium" },
+  { id: 58, title: "Проверить доступность", completed: true, priority: "high" },
+  { id: 64, title: "Проверить кроссбраузерность", completed: false, priority: "medium" },
+];

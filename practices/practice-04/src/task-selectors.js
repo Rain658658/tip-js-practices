@@ -1,5 +1,15 @@
-// Перед началом ПР4 заменить этот файл собственной проверенной версией из ПР3.
+"use strict";
+
 export function getVisibleTasks(tasks, filter = "all") {
-  // TODO: перенести реализацию all/pending/completed из ПР3.
-  throw new Error("Не реализовано: getVisibleTasks");
+  if (!Array.isArray(tasks)) return [];
+
+  switch (filter) {
+    case "pending":
+      return tasks.filter((t) => t.completed === false);
+    case "completed":
+      return tasks.filter((t) => t.completed === true);
+    case "all":
+    default:
+      return tasks.slice();
+  }
 }
